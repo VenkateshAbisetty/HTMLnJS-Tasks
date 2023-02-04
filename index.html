@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculate in Dog Years</title>
+	</head>
+	<body>
+		<script>
+			function handleonclick()
+			{
+				document.getElementById("display").value=document.getElementById("age").value * 7;
+			}
+
+		</script>
+		<style>
+			.button
+			{
+				display: flex;
+				flex-direction:row;
+				justify-content:flex-start;
+				
+
+			}
+			button{
+				background-color:gold ;
+				border-radius:5px;
+				margin:3px;
+				width:10%;
+				height:8%;
+			}
+
+		</style>
+
+		<h2> Find out your age in dog years!</h2>
+		<table>
+			<tr>
+				<td>Enter your age:</td>
+				<td><input type="number" id="age"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" onclick="handleonclick()" value="Calculate"></td>
+			</tr>
+			<tr>
+				<td>Your age in Dog Years:</td>
+				<td><input type="number" id="display"></td>
+			</tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<div class="button">
+		<button><a href="Calculator.html"><h3>Simple Calculator</h3></a></button><br>
+		<button><a href="Login.html"><h3>Login Page</h3></a></button><br>
+		<button><a href="OnChangeBgChange.html"><h3>Background Color</h3></a></button><br>
+		<button><a href="OnChangeBgImageChange.html"><h3>BgImage Change</h3></a></button><br>
+		</div>
+
+	</body>
+</html>

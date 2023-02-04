@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Home Page
+	</title>
+	</head>
+	<body>
+		<script>
+
+				function validate()
+				{
+					var count = 0;
+					var Email = document.myform.email.value;
+					var email = /^[A-Za-z0-9_]+@[A-Za-z.]+$/;
+					var Password = document.myform.password.value;
+					var password = /[A-Za-z0-9]{5,8}/;
+					var Phone = document.myform.number.value;
+					var phone = /[0-9]{10}/;
+					if((Email!="") && (Password!="") && (Phone!=""))
+					{
+
+						if(email.test(Email))
+						{
+							count++;
+
+						}
+						else
+						{
+							alert("Enter email in xxxxx@xxxx format");
+						}	
+						if(password.test(Password))
+						{
+							count++;
+						}
+						else
+						{
+							alert("Enter only AlphaNumeric Characters of Range 5-8");
+						}
+						if(phone.test(Phone))
+						{
+							count++;
+						}	
+						else
+						{
+							alert("Enter only numbers -10");
+						}	
+
+
+					}
+					else
+					{
+						alert("Must enter every field to login");
+						return false;
+					}
+
+					if(count==3)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}	
+						
+				}	
+
+
+		</script>
+		<style>
+			.button
+			{
+				display: flex;
+				flex-direction:row;
+				justify-content:flex-start;
+				
+		
+			}
+			button{
+				background-color:gold ;
+				border-radius:5px;
+				margin:3px;
+				width:10%;
+				height:8%;
+			}
+		
+		</style>
+		<h1>Login Page</h1>
+	<form name="myform" action="java.jsp" onsubmit="return validate()">
+		<table>
+		<tr><td>E-mail:</td><td> <input type="text" name="email"></td></tr>
+		<tr><td>Password:</td><td><input type="text" name="password"></td></tr>
+		<tr><td>Phone:</td><td><input type="text" name="number"></td></tr>
+		</table>
+		<input type="submit" value="submit">
+		
+	</form>
+		<div class="button">
+		<button><a href="index.html"><h3>Home</h3></a></button><br>
+		<button><a href="Calculator.html"><h3>Simple Calculator</h3></a></button><br>
+		<button><a href="OnChangeBgChange.html"><h3>Background Color</h3></a></button><br>
+		<button><a href="OnChangeBgImageChange.html"><h3>BgImage Change</h3></a></button><br>
+		</div>
+	</body>
+</html>

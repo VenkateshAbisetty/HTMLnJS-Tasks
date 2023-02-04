@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		OnChange BackgroundChange
+	</title>
+</head>
+<body>
+	<script>
+		function handleOnchange(x)
+		{
+			document.bgColor=x.value;
+
+		}
+
+
+	</script>
+
+<style>
+	.button
+	{
+		display: flex;
+		flex-direction:row;
+		justify-content:flex-start;
+		
+
+	}
+	button{
+		background-color:gold ;
+		border-radius:5px;
+		margin:3px;
+		width:10%;
+		height:8%;
+	}
+</style>
+		<select onchange="handleOnchange(this)">
+			<option value="">Select any</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="red">Red</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<div class="button">
+			<button><a href="index.html"><h3>Home</h3></a></button><br>
+			<button><a href="Calculator.html"><h3>Simple Calculator</h3></a></button><br>
+			<button><a href="Login.html"><h3>Login Page</h3></a></button><br>
+			<button><a href="OnChangeBgImageChange.html"><h3>BgImage Change</h3></a></button><br>
+		</div>	
+
+	</body>
+</html>
